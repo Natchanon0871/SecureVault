@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="D:\AllHM\Network security\Secure-File-System\venv"
+VIRTUAL_ENV="C:\Users\natch\Downloads\SecureVault-main upgraded\SecureVault-main upgraded\SecureVault-main\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
