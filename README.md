@@ -47,3 +47,13 @@ SQLite database will be created automatically
 RSA keys are generated during user registration
 
 Original uploaded files are deleted after encryption
+
+### VS Code Fix
+
+If Flask import is still red in VS Code:
+
+1. Press `CTRL + SHIFT + P`
+
+2. Select `Python: Select Interpreter`
+
+3. Choose the `venv` interpreter

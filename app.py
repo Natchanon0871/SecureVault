@@ -5,7 +5,8 @@ from flask import (
     redirect,
     session,
     send_file,
-    flash
+    flash,
+    url_for
 )
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -317,6 +318,12 @@ def logout():
 
     return redirect("/login")
 
+@app.errorhandler(413)
+def file_too_large(error):
+
+    flash("File is too large (max 16 MB)")
+
+    return redirect(url_for("upload"))
 
 if __name__ == "__main__":
 
@@ -324,10 +331,3 @@ if __name__ == "__main__":
         db.create_all()
 
     app.run(debug=True)
-
-@app.errorhandler(413)
-def file_too_large(error):
-
-    flash("File is too large (max 16 MB)")
-
-    return redirect("/upload")
